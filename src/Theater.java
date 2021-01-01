@@ -102,7 +102,7 @@ public Theater(int numRow, int seatsPerRow ) {
             return false;
         }
     }
-
+//Adding comment for testing
     public boolean cancelSeatReservation(String seat) {
 
         int cmv = findSeat(seat);
