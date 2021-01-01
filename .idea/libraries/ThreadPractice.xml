@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ThreadPractice">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ColorInterface/out/artifacts/ThreadPractice_jar/ThreadPractice.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
