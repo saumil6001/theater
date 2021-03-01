@@ -1,4 +1,4 @@
-import com.company.Color;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println(Color.RED + "\t\t\t Welcome to " + Theater.getName() +
-                            "\n ============================================"+Color.RESET );
+        System.out.println( "\t\t\t Welcome to " + Theater.getName() +
+                            "\n ============================================" );
 
         run();
     }
@@ -21,7 +21,7 @@ public class Main {
 
     public static void printInstruction(){
 
-        System.out.println(Color.GREEN+"""
+        System.out.println("""
 
                         Please chose from following.
                         \t1. Print Seat List
@@ -32,7 +32,7 @@ public class Main {
                         \t6. Print Seat List in Price Order (Low to High) 
                         \t7. Quit\s
 
-                        """+ Color.RESET
+                        """ 
                    );
 
     }
@@ -55,7 +55,7 @@ public class Main {
                 choice= scanner.nextInt();
 
             } catch (InputMismatchException ignored) {
-                System.out.println(Color.RED+"Check Entry "+Color.RESET);
+                System.out.println("Check Entry ");
                 scanner.next();
                 printInstruction();
                 continue;
@@ -84,7 +84,7 @@ public class Main {
                 case 5 -> pvr.availableSeat();
                 case 6 -> pvr.printListPriceOrder();
                 case 7 -> quit = true;
-                default -> System.out.println(Color.RED+"Enter correct choice."+Color.RESET);
+                default -> System.out.println("Enter correct choice.");
             }
         }
     }

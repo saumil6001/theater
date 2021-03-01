@@ -1,4 +1,4 @@
-import com.company.Color;
+
 import com.sun.source.doctree.ThrowsTree;
 
 import java.awt.*;
@@ -82,7 +82,7 @@ public Theater(int numRow, int seatsPerRow ) {
         for (Seat seats : this.seat) {
 
             if (!seats.isReserved) {
-                System.out.print(seats + "\t");
+                System.out.print(seats.getSeatName()+" "+seats.getPrice() + "\t");
             }
         }
         System.out.println();
@@ -144,7 +144,7 @@ public Theater(int numRow, int seatsPerRow ) {
         System.out.print("Seats : ");
         for (Seat seats : priceSet) {
 //            if (!seats.isReserved) {
-            System.out.print(seats + "\t");
+            System.out.print(seats.seatName+": "+seats.getPrice() + "  \t\t");
 //            }
         }
         System.out.println();
@@ -161,11 +161,11 @@ public Theater(int numRow, int seatsPerRow ) {
 
 
                 if (seats.isReserved()) {
-                    seatName = Color.RED+seats.getSeatName() + " "+"$"+ seats.getPrice();
+                    seatName = seats.getSeatName() + " "+"$"+ seats.getPrice();
                 } else {
-                    seatName = Color.BLUE+seats.getSeatName() + " "+"$"+ seats.getPrice();
+                    seatName = seats.getSeatName() + " "+"$"+ seats.getPrice();
                 }
-                System.out.print(seatName + "\t");
+                System.out.print(seatName + " \t");
 
                 if (!(i == 0)) {
                     if ((i + 1) % seatsPerRow == 0) {
@@ -173,7 +173,7 @@ public Theater(int numRow, int seatsPerRow ) {
                     }
                 }
             }
-        System.out.println(Color.RESET);
+        System.out.println();
     }
 
     public List<Seat> getSeat() {
